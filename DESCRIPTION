@@ -112,5 +112,5 @@ VignetteBuilder: knitr
 LazyData: true
 URL: https://github.com/BioinformaticsFMRP/TCGAbiolinks
 BugReports: https://github.com/BioinformaticsFMRP/TCGAbiolinks/issues
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Encoding: UTF-8
