@@ -49,7 +49,11 @@ querySub <- GDCquery(
     barcode = caseDf_sub$sample.submitter_id
 )
 saveRDS(querySub,file = "../querySub.RDS")
+
+## Download and prepare data
 GDCdownload(query = querySub, method = "api", files.per.chunk = 10)
 dds1 <- GDCprepare(query = querySub)
+
+View(data.frame(project=dds1$project_id,sample__submitter_id=dds1$sample_submitter_id,sample_type=dds1$sample_type,tissue_type = dds1$tissue_type,tissue_origin=dds1$tissue_or_organ_of_origin))
 
 
