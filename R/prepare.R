@@ -1971,7 +1971,6 @@ getBarcodeInfo <- function(barcode) {
         follow_ups[,c("updated_datetime","created_datetime","state")] <- NULL
         if (any(grepl("submitter_id", colnames(follow_ups)))) {
             follow_ups$submitter_id <- gsub("_follow_up.*","", follow_ups$submitter_id)
-            if(is.null(follow_ups$submitter_id)){follow_ups$submitter_id <- NA}
             follow_ups_last <- follow_ups %>%
                 dplyr::select(
                     c(
