@@ -1,20 +1,53 @@
+[![Build Status](https://travis-ci.org/BioinformaticsFMRP/TCGAbiolinks.svg?branch=master)](https://travis-ci.org/BioinformaticsFMRP/TCGAbiolinks)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/BioinformaticsFMRP/TCGAbiolinks?branch=master&svg=true)](https://ci.appveyor.com/project/BioinformaticsFMRP/TCGAbiolinks)
+[![codecov.io](https://codecov.io/github/BioinformaticsFMRP/TCGAbiolinks/coverage.svg?branch=master)](https://codecov.io/github/BioinformaticsFMRP/TCGAbiolinks?branch=master)
+[![bioc](http://www.bioconductor.org/shields/years-in-bioc/TCGAbiolinks.svg)](http://bioconductor.org/packages/TCGAbiolinks/)
+[![bioc](http://bioconductor.org/shields/availability/devel/TCGAbiolinks.svg)](http://bioconductor.org/packages/TCGAbiolinks/)
+
+------------------------------------------------------------------------
+
 # TCGAbiolinks - An R/Bioconductor package for integrative analysis with TCGA data
 
-TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) through its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.
-
-This fork is derived from https://github.com/BioinformaticsFMRP/TCGAbiolinks. It is maintained as part of my INB321G course at the University of Texas Austin and where it is used to introduce biology students to scripting and experimenmtal design in computational biology research.
-
-You can install this package by running the following code.
+TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its
+GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.
 
 ### Installation from GitHub ###
 ```R
-if (!requireNamespace("pak", quietly = TRUE)){
-    install.packages("pak")
-}
-pak::pak("NolanBentley/TCGAbiolinks")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("BioinformaticsFMRP/TCGAbiolinksGUI.data")
+BiocManager::install("BioinformaticsFMRP/TCGAbiolinks")
+```
+
+### Installation from Bioconductor ###
+```R
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("TCGAbiolinks")
 ```
 
 ------------------------------------------------------------------------
+
+### Docker image ###
+
+TCGAbiolinks is available as Docker image (self-contained environments that contain everything needed to run the software), 
+which can be easily run on Mac OS, Windows and Linux systems. 
+
+This [PDF](https://drive.google.com/open?id=0B0-8N2fjttG-QXp5LVlPQnVQejg) show how to install and execute the image.
+
+The image can be obtained from Docker Hub: https://hub.docker.com/r/tiagochst/tcgabiolinksgui/
+
+For more information please check: https://docs.docker.com/ and https://www.bioconductor.org/help/docker/
+
+
+### Manual ###
+
+http://bioconductor.org/packages/devel/bioc/vignettes/TCGAbiolinks/inst/doc/index.html
+
+------------------------------------------------------------------------
+
 
 ## Citation
 
